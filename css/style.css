@@ -5,16 +5,16 @@
     box-sizing: border-box;
 }
 
-/* Set the background animation */
+/* Set the body background and full height */
 body {
     background: linear-gradient(135deg, #ff66b2, #ff3399);
     animation: gradient-animation 6s ease infinite;
     font-family: Arial, sans-serif;
     color: white;
-    height: 100vh;
+    height: 100vh; /* This makes sure the background fills the entire height of the screen */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0;
 }
 
 /* Create an animated gradient effect */
@@ -24,17 +24,19 @@ body {
     100% { background: linear-gradient(135deg, #ff66b2, #ff3399); }
 }
 
-/* Style the navigation bar */
+/* Style the navigation bar to be at the top of the page */
 .navbar {
-    position: absolute;
-    top: 10px;
-    width: 100%;
+    position: fixed;  /* Make the navbar fixed at the top of the page */
+    top: 0;  /* Position it at the top */
+    width: 100%;  /* Ensure it spans the full width */
     display: flex;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);  /* Transparent black background for navbar */
     padding: 10px;
+    z-index: 10;  /* Ensure it stays on top of other content */
 }
 
+/* Style the navbar links */
 .navbar a {
     color: white;
     text-decoration: none;
@@ -48,16 +50,17 @@ body {
     color: #ff3399;
 }
 
-/* Center the main content */
+/* Adjust the main content to account for the fixed navbar */
 .main-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    padding-top: 60px;  /* Add padding to ensure content doesn't get hidden behind the navbar */
+    text-align: center;
 }
 
 .main-content h1 {
     font-size: 60px;
-    text-align: center;
     font-family: 'Arial', sans-serif;
 }
