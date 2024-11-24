@@ -1,0 +1,63 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background animation */
+body {
+    background: linear-gradient(135deg, #ff66b2, #ff3399);
+    animation: gradient-animation 6s ease infinite;
+    font-family: Arial, sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Create an animated gradient effect */
+@keyframes gradient-animation {
+    0% { background: linear-gradient(135deg, #ff66b2, #ff3399); }
+    50% { background: linear-gradient(135deg, #ff3399, #ff66b2); }
+    100% { background: linear-gradient(135deg, #ff66b2, #ff3399); }
+}
+
+/* Style the navigation bar */
+.navbar {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover {
+    color: #ff3399;
+}
+
+/* Center the main content */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.main-content h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
